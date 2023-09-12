@@ -9,10 +9,11 @@ namespace Gameboard
         [SerializeField] private Tilemap bfTilemap;
         [SerializeField] private Tilemap selectTilemap;
         [SerializeField] private TileBase selectedTile;
+        [SerializeField] private TileBase unselectedTile;
 
         private Camera mainCamera;
         private BFCell[,] grid;
-
+        public BFCell[,] Grid => grid;
         private SelectorHandler preview;
 
         private void Awake()
@@ -20,7 +21,11 @@ namespace Gameboard
             mainCamera = Camera.main;
 
             grid = new InputReader(bfTilemap).ReadInputToGrid();
-            preview = new SelectorHandler(selectTilemap);
+            preview = new SelectorHandler(selectTilemap, selectedTile, unselectedTile);
+        }
+
+        private void Start()
+        {
         }
 
         public void SelectCell(InputAction.CallbackContext context)
@@ -34,7 +39,7 @@ namespace Gameboard
                 if (context.performed)
                 {
                     var cell = GetCell(hit.point);
-                    preview.UpdateTile(cell, selectedTile);
+                    preview.UpdateTile(cell);
                 }
             }
         }

@@ -1,17 +1,15 @@
-using Characters;
 using System;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
 namespace Gameboard
 {
     public class BFCell : IEquatable<BFCell>
     {
         private readonly Vector3Int gridPosition;
-        private GridElement content;
+        private GameObject content;
 
         public Vector3Int GridPosition => gridPosition;
-        public GridElement Content => content;
+        public GameObject Content => content;
         public bool IsContentFilled => content != null;
 
         public BFCell(Vector3Int gridPosition)
@@ -19,7 +17,7 @@ namespace Gameboard
             this.gridPosition = gridPosition;
         }
 
-        public void SetContent(GridElement content)
+        public void SetContent(GameObject content)
         {
             this.content = content;
         }

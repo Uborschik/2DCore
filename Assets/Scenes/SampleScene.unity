@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 494296794}
   - component: {fileID: 494296796}
   - component: {fileID: 494296795}
+  - component: {fileID: 494296797}
   m_Layer: 0
   m_Name: Gameboard
   m_TagString: Untagged
@@ -172,6 +173,8 @@ MonoBehaviour:
   bfTilemap: {fileID: 1183467600}
   selectTilemap: {fileID: 1297301871}
   selectedTile: {fileID: 11400000, guid: 42281bd5f7bbd5546ba8f16631924aad, type: 2}
+  unselectedTile: {fileID: 0}
+  objectTest: {fileID: 0}
 --- !u!114 &494296796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,6 +221,21 @@ MonoBehaviour:
   m_DefaultActionMap: Gameboard
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 519420031}
+--- !u!114 &494296797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494296793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978596cad81d4d2ca6e05fdebb26210d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameboard: {fileID: 494296795}
+  pawnPrefab: {fileID: 1693702898421153472, guid: 7270ea08dc84bdf4cbb4b1e3acca5bc9, type: 3}
+  pawns: []
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1324,7 +1342,7 @@ Grid:
   m_GameObject: {fileID: 1982645323}
   m_Enabled: 1
   m_CellSize: {x: 1, y: 1, z: 0}
-  m_CellGap: {x: 0.1, y: 0.1, z: 0}
+  m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
 --- !u!1660057539 &9223372036854775807
