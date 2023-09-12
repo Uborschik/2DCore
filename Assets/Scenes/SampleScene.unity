@@ -174,7 +174,6 @@ MonoBehaviour:
   selectTilemap: {fileID: 1297301871}
   selectedTile: {fileID: 11400000, guid: 42281bd5f7bbd5546ba8f16631924aad, type: 2}
   unselectedTile: {fileID: 0}
-  objectTest: {fileID: 0}
 --- !u!114 &494296796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,6 +235,7 @@ MonoBehaviour:
   gameboard: {fileID: 494296795}
   pawnPrefab: {fileID: 1693702898421153472, guid: 7270ea08dc84bdf4cbb4b1e3acca5bc9, type: 3}
   pawns: []
+  spawnedPawnCount: 3
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,8 +468,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1853200523
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -1189,8 +1189,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1853200523
+  m_SortingLayer: 1
   m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
